@@ -50,13 +50,13 @@ public class Calculator {
     public void equalTrigger() {
         Float value = doOperation();
         operandInput.setText(value.toString());
-        dot = false;
+        dotFlag = false;
         lastOperand = null;
     }
 
     public void dotTrigger() {
-        if(!dot) {
-            dot = true;
+        if(!dotFlag) {
+            dotFlag = true;
             operandInput.setText(operandInput.getText() + ".");
         }
     }
@@ -69,7 +69,7 @@ public class Calculator {
                 lastOperand = doOperation();
             }
         }
-        dot = false;
+        dotFlag = false;
         operandInput.setText("");
         selectedOperation = Operation.Divide;
     }
@@ -82,7 +82,7 @@ public class Calculator {
                 lastOperand = doOperation();
             }
         }
-        dot = false;
+        dotFlag = false;
         operandInput.setText("");
         selectedOperation = Operation.Multiply;
     }
@@ -97,7 +97,7 @@ public class Calculator {
         } else {
             lastOperand = doOperation();
         }
-        dot = false;
+        dotFlag = false;
         operandInput.setText("");
         selectedOperation = Operation.Sub;
     }
@@ -110,7 +110,7 @@ public class Calculator {
                 lastOperand = doOperation();
             }
         }
-        dot = false;
+        dotFlag = false;
         operandInput.setText("");
         selectedOperation = Operation.Add;
     }
