@@ -1,7 +1,9 @@
 # Compiled class file
+*/*/out
 *.class
 
 # Log file
+*/*/.idea
 *.log
 
 # BlueJ files
