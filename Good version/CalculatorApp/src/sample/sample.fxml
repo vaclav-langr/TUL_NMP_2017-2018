@@ -1,0 +1,52 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import java.lang.Integer?>
+<VBox fx:controller="sample.Calculator"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:id="box">
+    <fx:define>
+        <Integer fx:id="minimum" fx:value="60"/>
+    </fx:define>
+
+    <TextField fx:id="operandInput" editable="false"/>
+    <GridPane fx:id="selection">
+        <Button fx:id="7" GridPane.rowIndex="1" GridPane.columnIndex="1" text="7"
+                onAction="#numberPressedEvent" minWidth="$minimum" minHeight="$minimum"/>
+        <Button fx:id="4" GridPane.rowIndex="2" GridPane.columnIndex="1" text="4"
+                onAction="#numberPressedEvent" minWidth="$minimum" minHeight="$minimum"/>
+        <Button fx:id="1" GridPane.rowIndex="3" GridPane.columnIndex="1" text="1"
+                onAction="#numberPressedEvent" minWidth="$minimum" minHeight="$minimum"/>
+
+        <Button fx:id="8" GridPane.rowIndex="1" GridPane.columnIndex="2" text="8"
+                onAction="#numberPressedEvent" minWidth="$minimum" minHeight="$minimum"/>
+        <Button fx:id="5" GridPane.rowIndex="2" GridPane.columnIndex="2" text="5"
+                onAction="#numberPressedEvent" minWidth="$minimum" minHeight="$minimum"/>
+        <Button fx:id="2" GridPane.rowIndex="3" GridPane.columnIndex="2" text="2"
+                onAction="#numberPressedEvent" minWidth="$minimum" minHeight="$minimum"/>
+
+        <Button fx:id="9" GridPane.rowIndex="1" GridPane.columnIndex="3" text="9"
+                onAction="#numberPressedEvent" minWidth="$minimum" minHeight="$minimum"/>
+        <Button fx:id="6" GridPane.rowIndex="2" GridPane.columnIndex="3" text="6"
+                onAction="#numberPressedEvent" minWidth="$minimum" minHeight="$minimum"/>
+        <Button fx:id="3" GridPane.rowIndex="3" GridPane.columnIndex="3" text="3"
+                onAction="#numberPressedEvent" minWidth="$minimum" minHeight="$minimum"/>
+
+        <Button fx:id="equal" GridPane.rowIndex="4" GridPane.columnIndex="1" text="="
+                onAction="#equalPressedEvent" minWidth="$minimum" minHeight="$minimum"/>
+        <Button fx:id="0" GridPane.rowIndex="4" GridPane.columnIndex="2" text="0"
+                onAction="#numberPressedEvent" minWidth="$minimum" minHeight="$minimum"/>
+        <Button fx:id="decimalDot" GridPane.rowIndex="4" GridPane.columnIndex="3" text="."
+                onAction="#dotPressedEvent" minWidth="$minimum" minHeight="$minimum"/>
+
+        <Button GridPane.rowIndex="1" GridPane.columnIndex="4" text="/"
+                onAction="#operationPressedEvent" minWidth="$minimum" minHeight="$minimum"/>
+        <Button GridPane.rowIndex="2" GridPane.columnIndex="4" text="*"
+                onAction="#operationPressedEvent" minWidth="$minimum" minHeight="$minimum"/>
+        <Button GridPane.rowIndex="3" GridPane.columnIndex="4" text="-"
+                onAction="#operationPressedEvent" minWidth="$minimum" minHeight="$minimum"/>
+        <Button GridPane.rowIndex="4" GridPane.columnIndex="4" text="+"
+                onAction="#operationPressedEvent" minWidth="$minimum" minHeight="$minimum"/>
+    </GridPane>
+</VBox>
