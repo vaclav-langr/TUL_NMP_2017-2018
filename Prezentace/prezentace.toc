@@ -1,0 +1,4 @@
+\select@language {czech}
+\beamer@sectionintoc {1}{Uvod}{1}{0}{1}
+\beamer@sectionintoc {2}{\IeC {\'U}vod}{2}{0}{2}
+\beamer@sectionintoc {3}{Podekovani}{9}{0}{3}

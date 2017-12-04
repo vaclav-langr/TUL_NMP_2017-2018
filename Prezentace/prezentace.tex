@@ -1,0 +1,131 @@
+% Příklad použití šablony FM TUL 
+% vytvořil Jan Koprnický
+% upraveno 14. 1. 2015
+
+% Nastavení šablony
+\input{settings_FM_template.tex}
+
+\title{GUI kalkulačka}
+%
+\author{Václav Langr}
+\supervisor{}
+% 
+\date{\today} %14.\,1.\,2015} % předefinování data
+% Textový obsah pod linkou na titulní straně
+\newcommand{\TextTitulniStranaPodLinkou}{\tiny
+Studentská 2 {\color{FM_TUL} |} 461\,17 Liberec 2 {\color{FM_TUL} |} 
+{vaclav.langr@tul.cz} {\color{FM_TUL} |} 
+\href{http://www.fm.tul.cz/}{www.fm.tul.cz}}
+%===============================================================================
+%===============================================================================
+\begin{document} 
+\section{Uvod}
+\begin{frame}[plain]
+\titlepage
+\end{frame}
+%===============================================================================
+%===============================================================================
+\section{Úvod}
+\begin{frame}
+	\vfill
+		\begin{block}{Zadání}
+    \begin{itemize}
+        \item Vybrat špatný příklad jednoduché aplikace, který porušeje minimálně 2 principy z GRASP nebo STUPID/SOLID
+        \item Implementovat aplikaci a vytvořit UML diagram
+        \item Vytvořit správný model
+        \item Správný model implementovat a vytvořit UML diagram
+      \end{itemize}
+    \end{block}
+\end{frame}
+\begin{frame}
+	\vfill
+	\begin{block}{Špatný příklad}
+		\begin{itemize}
+			\item Porušuje vzor GRASP Controller, vše probíhá v jediné třídě
+			\item Dále se zde objevuje doplicitní kód, metody "add()", "sub()", atd. jsou podobné
+			\item Také porušuje princip "jediné zodpovědnosti"
+		\end{itemize}
+	\end{block}
+		\begin{figure}[!ht]
+	\begin{center}
+		\includegraphics[scale=0.80]{obr/badmodel.jpg}
+	\end{center}
+\end{figure}
+\end{frame}
+\begin{frame}
+	\vfill
+	\begin{block}{Výhody špatného návrhu}
+		\begin{itemize}
+			\item Rychlá implementace
+			\item Menší časová náročnost
+		\end{itemize}
+	\end{block}
+	\begin{block}{Nevýhody špatného návrhu}
+	\begin{itemize}
+		\item Kvůli duplicitnímu kódu je možné zanesení chyby při změně pouze některé z částí
+		\item Špatná rozšiřitelnost o nové funkce
+		\item Složitá testovatelnost, udržovatelnost a testovatelnost
+	\end{itemize}
+\end{block}
+\end{frame}
+\begin{frame}
+	\vfill
+	\begin{block}{Správný příklad}
+		Využívá se principu programování vůči rozhraní, použití vzoru. 
+		
+		Z návrhových vzorů jsou použity vzory "strategie" a "továrna".
+			\begin{figure}[!ht]
+			\begin{center}
+				\includegraphics[scale=0.185]{obr/goodmodel1.jpg}
+			\end{center}
+		\end{figure}
+	\end{block}
+\end{frame}
+\begin{frame}
+	\vfill
+	\begin{block}{Správný příklad}
+		\begin{figure}[!ht]
+			\begin{center}
+				\includegraphics[scale=0.27]{obr/goodmodel2.jpg}
+			\end{center}
+		\end{figure}
+	\end{block}
+\end{frame}
+\begin{frame}
+	\vfill
+	\begin{block}{Správný příklad}
+		\begin{figure}[!ht]
+			\begin{center}
+				\includegraphics[scale=0.19]{obr/goodmodel3.jpg}
+			\end{center}
+		\end{figure}
+	\end{block}
+\end{frame}
+\begin{frame}
+	\vfill
+	\begin{block}{Výhody správného návrhu}
+		\begin{itemize}
+			\item Nedochází k duplicitě kódu
+			\item Jednodušší rozšiřitelnost, udržovatelnost i testovatelnost
+			\item Daná třída má pouze jedinou zodpovědnost
+			\item Možnost vytvoření různých režimů
+		\end{itemize}
+	\end{block}
+	\begin{block}{Nevýhody špatného návrhu}
+		\begin{itemize}
+			\item Složitější implementace metody "operationPressed()" kvůli přidání možnosti unární operace
+			\item Větší časové nároky na vytvoření modelu
+		\end{itemize}
+	\end{block}
+\end{frame}
+%===============================================================================
+\section{Podekovani}
+\begin{frame}
+	\vfill
+  \begin{center}
+  {\Large \bfseries
+    Děkuji za pozornost.
+    } 
+  \end{center}
+\end{frame}
+\end{document}

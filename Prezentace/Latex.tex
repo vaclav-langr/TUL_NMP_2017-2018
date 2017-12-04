@@ -1,0 +1,99 @@
+\documentclass[FM,DP]{tulthesis}
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[a-1a]{pdfx}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{nicefrac}
+\usepackage{caption}
+\usepackage{listings}
+
+\usepackage[titles]{tocloft}
+\usepackage[titletoc,title]{appendix}
+\newcounter{Vzorce}
+\addtocounter{Vzorce}{1}
+
+\TULtitle{Multiplatformní aplikace pro hlasové ovládání}{Multi-platform application for voice control}
+\TULprogramme{N2612}{Elektrotechnika a informatika}{Electrical Engineering and Informatics}
+\TULbranch{1802T007}{Informační technologie}{Information Technology}
+\TULauthor{Bc. Václav Langr}
+\TULsupervisor{Ing. Petr Červa, Ph.D.}
+
+\begin{document}
+\ThesisStart{male}{zadani}
+\begin{acknowledgement}
+Chtěl bych poděkovat vedoucímu této práce Ing. Petru Červovi, Ph.D. a také Ing. Ondřeji Smolovi za velice přínosné konzultace, rady a trpělivost, bez kterých by tato práce nevznikla.
+\end{acknowledgement}
+\clearpage
+\begin{abstractCZ}
+\textbf{Klíčová slova:} 
+\end{abstractCZ}
+\vspace{2cm}
+\begin{abstractEN}
+\textbf{Keywords:}
+\end{abstractEN}
+\clearpage
+\tableofcontents
+
+\listoffigures
+
+\newcommand{\listequationsname}{Seznam vzorců}
+\newlistof{myequations}{equ}{\listequationsname}
+\newcommand{\myequations}[1]{%
+	\addcontentsline{equ}{myequations}{\protect\numberline{}#1}\par}
+\setlength{\cftmyequationsnumwidth}{0.0em}
+\listofmyequations
+
+\pagebreak
+
+\renewcommand{\baselinestretch}{1.50}
+\setlength\parindent{1.2cm}
+\selectfont
+
+\chapter{Úvod}
+\label{ch:uvod}
+
+\chapter{}
+
+\chapter{Závěr}
+\label{ch:end}
+
+
+\renewcommand{\bibname}{Literatura}
+\begin{thebibliography}{99}
+\addcontentsline{toc}{chapter}{Literatura}
+\bibitem{recAPocitac}EDITOŘI JAN NOUZA, Zbyněk KOLDOVSKÝ a Robert VÍCH. Řeč a počítač: principy hlasové komunikace, úlohy, metody a aplikace : sborník článků. Liberec: Technická univerzita v Liberci, 2009. ISBN 8073725487.
+\bibitem{oreileyJS}ELLIOTT, Eric. Programming JavaScript applications. Sebastopol: O'Reilly, 2014. ISBN 1491950293.
+\end{thebibliography}
+
+\clearpage
+\appendix
+\captionsetup[figure]{list=no}
+\addcontentsline{toc}{chapter}{Přílohy}
+\chapter*{Přílohy}
+\addcontentsline{toc}{section}{Příloha A: Obsah přiloženého CD}
+\section*{Příloha A: Obsah přiloženého CD}
+	\label{appA}
+	Součástí této diplomové práce je CD obsahující kompletní technickou dokumentaci a zdrojové kódy, které vznikly během zpracování práce.
+	\begin{itemize}
+		\setlength\itemsep{1.5em}
+		\item \textbf{Dokumentace.pdf} - Technická dokumentace ve formátu PDF
+		\item \textbf{složka}
+		\begin{itemize}
+			\item podsložka - popis
+		\end{itemize}
+	\end{itemize}
+\newpage
+\addcontentsline{toc}{section}{Příloha B: Finální podoba algoritmu}
+\section*{Příloha B: Název přílohy}
+	\begin{figure}[!ht]
+		\begin{center}
+			\includegraphics[scale=0.85]{obr/finalAlg.pdf}
+		\end{center}
+		\caption{Diagram finálního algoritmu}
+		\label{fig:finalAlg}
+	\end{figure}
+\newpage
+\end{document}
